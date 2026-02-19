@@ -1,0 +1,329 @@
+code
+Html
+play_circle
+download
+content_copy
+expand_less
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Premium | Sua Solução Tech</title>
+    
+    <!-- Google Fonts: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* AQUI ENTRA O SEU CSS ENVIADO */
+        :root{   --bg: #070A12;   --bg2:#0B0F1A;   --card:#0E1424;   --soft:#0A1020;   --text:#EAF0FF;   --muted: rgba(234,240,255,.72);   --muted2: rgba(234,240,255,.56);   --line: rgba(234,240,255,.10);   --accent:#7C5CFF;   --accent2:#19D3FF;   --shadow: 0 16px 40px rgba(0,0,0,.45);   --radius: 18px;   --radius2: 24px;   --max: 1040px; }  *{ box-sizing:border-box; } html,body{ height:100%; } body{   margin:0;   font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;   background: radial-gradient(1200px 800px at 15% 0%, rgba(124,92,255,.22), transparent 50%),               radial-gradient(900px 700px at 95% 10%, rgba(25,211,255,.18), transparent 40%),               linear-gradient(180deg, var(--bg), var(--bg2));   color: var(--text);   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; }  a{ color: inherit; text-decoration:none; } img{ max-width:100%; display:block; }  .container{   width: min(var(--max), calc(100% - 40px));   margin: 0 auto; }  .skip{   position:absolute;   left:-9999px;   top:auto;   width:1px;height:1px;   overflow:hidden; } .skip:focus{   left: 16px; top: 16px;   width:auto;height:auto;   padding:10px 12px;   border-radius:12px;   background: var(--card);   outline: 2px solid rgba(124,92,255,.6);   z-index:9999; }  /* Topbar */ .topbar{   position: sticky;   top:0;   z-index:20;   background: rgba(7,10,18,.72);   backdrop-filter: blur(10px);   border-bottom: 1px solid var(--line); } .topbar__inner{   display:flex;   align-items:center;   justify-content:space-between;   padding: 14px 0;   gap: 12px; } .brand{   display:flex;   gap: 10px;   align-items:center;   min-width: 0; } .brand__mark{   width: 12px; height: 12px;   border-radius: 50%;   background: linear-gradient(135deg, var(--accent), var(--accent2));   box-shadow: 0 0 0 6px rgba(124,92,255,.12);   flex: 0 0 auto; } .brand__text{ display:flex; flex-direction:column; line-height:1.1; min-width:0; } .brand__text strong{ font-weight:800; letter-spacing: .2px; } .brand__text span{ font-size: 12px; color: var(--muted2); }  .pill{   display:inline-flex;   align-items:center;   gap:10px;   padding: 10px 12px;   border-radius: 999px;   background: rgba(234,240,255,.06);   border: 1px solid rgba(234,240,255,.12);   font-weight: 700;   font-size: 13px; } .pill__dot{   width: 8px; height: 8px;   border-radius: 50%;   background: #2AF59B;   box-shadow: 0 0 0 5px rgba(42,245,155,.12); }  /* Hero */ .hero{   padding: 26px 0 10px; } .hero__grid{   display:grid;   gap: 18px; } .hero__media{   position:relative; } .hero__imageWrap{   position:relative;   border-radius: var(--radius2);   overflow:hidden;   background: linear-gradient(135deg, rgba(124,92,255,.20), rgba(25,211,255,.12));   border: 1px solid rgba(234,240,255,.10);   box-shadow: var(--shadow); } .hero__img{   width:100%;   height: 440px;   object-fit: cover;   object-position: center;   filter: saturate(1.02) contrast(1.02); } .hero__img.is-broken{   opacity:0;   height: 440px; } .hero__imageWrap::after{   content:"";   position:absolute;   inset:0;   background: radial-gradient(600px 240px at 30% 10%, rgba(124,92,255,.18), transparent 55%),               linear-gradient(180deg, transparent, rgba(7,10,18,.50));   pointer-events:none; } .hero__glow{   position:absolute;   inset:-40px -60px auto -60px;   height: 180px;   background: radial-gradient(closest-side, rgba(124,92,255,.35), transparent);   filter: blur(6px);   pointer-events:none; } .hero__badges{   display:flex;   gap:10px;   flex-wrap:wrap;   margin-top: 12px; } .badge{   font-size: 12px;   color: var(--muted);   padding: 8px 10px;   border-radius: 999px;   border: 1px solid rgba(234,240,255,.12);   background: rgba(234,240,255,.06); }  .hero__content{   padding-bottom: 6px; } .kicker{   margin:0 0 10px;   display:inline-flex;   gap:10px;   align-items:center;   font-weight: 800;   font-size: 12px;   letter-spacing: .14em;   text-transform: uppercase;   color: rgba(234,240,255,.80); } .h1{   margin: 0 0 12px;   font-size: 30px;   line-height: 1.08;   letter-spacing: -0.02em; } .accent{   background: linear-gradient(135deg, var(--accent), var(--accent2));   -webkit-background-clip:text;   background-clip:text;   color: transparent; } .sub{   margin: 0 0 18px;   font-size: 15px;   line-height: 1.6;   color: var(--muted); }  .ctaStack{ display:flex; flex-direction:column; gap: 8px; } .btn{   display:inline-flex;   align-items:center;   justify-content:center;   gap: 10px;   width: 100%;   padding: 14px 14px;   border-radius: 16px;   font-weight: 800;   border: 1px solid transparent;   cursor:pointer;   transition: transform .08s ease, box-shadow .18s ease, background .18s ease;   user-select:none; } .btn:active{ transform: translateY(1px); }  .btn--primary{   background: linear-gradient(135deg, rgba(124,92,255,1), rgba(25,211,255,1));   color: #071018;   box-shadow: 0 18px 40px rgba(124,92,255,.22); } .btn--primary:hover{   box-shadow: 0 22px 54px rgba(124,92,255,.28); } .btn--ghost{   background: rgba(234,240,255,.06);   border-color: rgba(234,240,255,.14);   color: var(--text); } .btn--ghost:hover{   background: rgba(234,240,255,.08); } .btn--xl{ padding: 16px 16px; border-radius: 18px; } .btn__arrow{ font-size: 18px; }  .micro{   margin:0;   font-size: 12px;   color: rgba(234,240,255,.72); } .micro--muted{ color: var(--muted2); }  .trustRow{   display:grid;   gap: 10px;   margin-top: 16px; } .trust{   display:flex;   gap: 10px;   align-items:center;   padding: 12px 12px;   border-radius: 16px;   background: rgba(234,240,255,.05);   border: 1px solid rgba(234,240,255,.10); } .trust__icon{   width: 22px; height: 22px;   border-radius: 50%;   display:grid; place-items:center;   background: rgba(42,245,155,.14);   color:#2AF59B;   font-weight: 900;   flex: 0 0 auto; }  /* Sections */ .section{   padding: 34px 0; } .section--soft{   background: linear-gradient(180deg, rgba(234,240,255,.03), transparent 65%);   border-top: 1px solid rgba(234,240,255,.06);   border-bottom: 1px solid rgba(234,240,255,.06); } .sectionHead{ margin-bottom: 16px; } .h2{   margin:0 0 8px;   font-size: 22px;   letter-spacing: -0.01em; } .h2--tight{ margin-bottom: 6px; } .p{   margin:0;   color: var(--muted);   line-height: 1.65;   font-size: 15px; } .p--muted{ color: var(--muted2); }  .split{   display:grid;   gap: 16px; } .card{   background: rgba(14,20,36,.70);   border: 1px solid rgba(234,240,255,.10);   border-radius: var(--radius2);   box-shadow: var(--shadow);   overflow:hidden; } .card--media{ position:relative; } .media{   width: 100%;   height: 340px;   object-fit: cover;   object-position: center; } .media.is-broken{ opacity:0; height: 340px; } .mediaOverlay{   position:absolute;   inset:0;   background: linear-gradient(180deg, transparent, rgba(7,10,18,.72));   pointer-events:none; } .mediaCaption{   position:absolute;   left: 14px; right: 14px;   bottom: 14px;   display:flex;   flex-direction:column;   gap: 2px; } .mediaCaption strong{ font-size: 14px; } .mediaCaption span{ font-size: 12px; color: var(--muted2); }  .content{ padding: 2px 0; }  .bullets{   margin: 14px 0 0;   padding: 0;   list-style:none;   display:grid;   gap: 10px; } .bullets li{   padding: 12px 12px;   border-radius: 16px;   background: rgba(234,240,255,.04);   border: 1px solid rgba(234,240,255,.10);   color: rgba(234,240,255,.78);   line-height: 1.55;   font-size: 14px; }  .inlineCta{   margin-top: 14px;   display:grid;   gap: 8px; }  .center{ display:flex; justify-content:center; margin-top: 12px; }  /* Results gallery */ .gallery{   display:grid;   grid-template-columns: 1fr 1fr;   gap: 10px; } .gItem{   border-radius: 16px;   overflow:hidden;   border: 1px solid rgba(234,240,255,.10);   background: rgba(234,240,255,.04);   position:relative;   cursor:pointer;   min-height: 120px; } .gItem img{   width:100%;   height: 100%;   object-fit: cover;   aspect-ratio: 1/1;   transform: scale(1.01);   transition: transform .18s ease; } .gItem:hover img{ transform: scale(1.04); } .gItem::after{   content:"";   position:absolute;   inset:0;   background: linear-gradient(180deg, transparent, rgba(7,10,18,.15));   pointer-events:none; } .gCap{   position:absolute;   left: 10px;   bottom: 10px;   font-size: 11px;   color: rgba(234,240,255,.78);   background: rgba(7,10,18,.55);   border: 1px solid rgba(234,240,255,.12);   padding: 6px 8px;   border-radius: 999px;   backdrop-filter: blur(6px); }  .disclaimer{   margin: 14px 0 0;   font-size: 12px;   color: rgba(234,240,255,.56); }  /* Cards */ .cards{   display:grid;   grid-template-columns: 1fr;   gap: 12px;   margin-top: 14px; } .miniCard{   padding: 14px 14px;   border-radius: 18px;   background: rgba(234,240,255,.04);   border: 1px solid rgba(234,240,255,.10); } .miniCard__icon{   width: 38px; height: 38px;   border-radius: 14px;   display:grid; place-items:center;   background: rgba(124,92,255,.14);   border: 1px solid rgba(124,92,255,.22);   margin-bottom: 10px; } .miniCard h3{   margin:0 0 6px;   font-size: 16px; } .miniCard p{   margin:0;   color: var(--muted2);   font-size: 14px;   line-height: 1.6; }  /* CTA band */ .section--cta{   padding: 26px 0; } .ctaBand{   display:grid;   gap: 14px;   padding: 18px;   border-radius: 24px;   background:     radial-gradient(900px 360px at 25% 0%, rgba(124,92,255,.22), transparent 55%),     radial-gradient(900px 360px at 100% 30%, rgba(25,211,255,.18), transparent 55%),     rgba(14,20,36,.75);   border: 1px solid rgba(234,240,255,.10);   box-shadow: var(--shadow); }  /* Steps */ .steps{   margin: 14px 0 0;   padding: 0;   list-style:none;   display:grid;   gap: 12px; } .step{   display:flex;   gap: 12px;   align-items:flex-start;   padding: 14px;   border-radius: 20px;   background: rgba(234,240,255,.04);   border: 1px solid rgba(234,240,255,.10); } .step__num{   width: 34px; height: 34px;   border-radius: 14px;   display:grid; place-items:center;   background: rgba(25,211,255,.14);   border: 1px solid rgba(25,211,255,.22);   font-weight: 900; } .step__body h3{ margin:0 0 6px; font-size: 16px; } .step__body p{ margin:0; color: var(--muted2); font-size: 14px; line-height: 1.6; }  /* Carousel */ .carousel{   display:grid;   grid-template-columns: 44px 1fr 44px;   gap: 10px;   align-items:center;   margin-top: 14px; } .carousel__btn{   height: 44px;   width: 44px;   border-radius: 16px;   border: 1px solid rgba(234,240,255,.12);   background: rgba(234,240,255,.06);   color: var(--text);   font-size: 22px;   cursor:pointer; } .carousel__btn:active{ transform: translateY(1px); } .carousel__viewport{   overflow:hidden;   border-radius: 22px;   border: 1px solid rgba(234,240,255,.10);   background: rgba(234,240,255,.03); } .carousel__track{   display:flex;   width: 100%;   transition: transform .25s ease; } .slide{   min-width: 100%;   position:relative; } .slide img{   width:100%;   height: 260px;   object-fit: cover; } .slide .label{   position:absolute;   left: 12px;   bottom: 12px;   padding: 8px 10px;   border-radius: 999px;   background: rgba(7,10,18,.55);   border: 1px solid rgba(234,240,255,.12);   backdrop-filter: blur(6px);   font-size: 12px;   color: rgba(234,240,255,.82); }  /* Final CTA */ .section--final{   padding: 36px 0 44px; } .finalCta{   text-align:center;   display:grid;   gap: 10px; } .finalCta .btn{ max-width: 520px; margin: 0 auto; }  /* Footer */ .footer{   padding: 22px 0 30px;   border-top: 1px solid rgba(234,240,255,.08);   background: rgba(7,10,18,.55); } .footer__inner{   display:flex;   align-items:flex-start;   justify-content:space-between;   gap: 16px; } .footer__links{   display:flex;   flex-direction:column;   gap: 8px;   text-align:right; } .footer__links a{   color: rgba(234,240,255,.82);   font-weight: 700;   font-size: 13px; } .footer__links a:hover{ text-decoration: underline; }  /* Lightbox */ .lightbox{   position: fixed;   inset: 0;   display:none;   z-index: 1000; } .lightbox.is-open{ display:block; } .lightbox__backdrop{   position:absolute;   inset:0;   background: rgba(0,0,0,.70);   backdrop-filter: blur(6px); } .lightbox__content{   position:absolute;   left: 50%;   top: 50%;   transform: translate(-50%, -50%);   width: min(92vw, 520px);   margin: 0;   border-radius: 22px;   overflow:hidden;   background: rgba(14,20,36,.92);   border: 1px solid rgba(234,240,255,.12);   box-shadow: 0 24px 80px rgba(0,0,0,.60); } .lightbox__content img{   width: 100%;   height: auto;   max-height: 70vh;   object-fit: contain;   background: #050814; } .lightbox__caption{   padding: 10px 12px;   font-size: 12px;   color: rgba(234,240,255,.70); } .lightbox__close{   position:absolute;   right: 10px;   top: 10px;   width: 40px; height: 40px;   border-radius: 16px;   border: 1px solid rgba(234,240,255,.14);   background: rgba(7,10,18,.55);   color: var(--text);   cursor:pointer; }  /* Desktop improvements (still mobile-first) */ @media (min-width: 900px){   .hero{ padding: 36px 0 14px; }   .hero__grid{     grid-template-columns: 1.05fr .95fr;     align-items:center;     gap: 26px;   }   .hero__img, .hero__img.is-broken{ height: 540px; }   .h1{ font-size: 42px; }   .trustRow{     grid-template-columns: 1fr;   }   .split{     grid-template-columns: .95fr 1.05fr;     align-items:center;     gap: 26px;   }   .media{ height: 420px; }   .cards{     grid-template-columns: 1fr 1fr 1fr;   }   .gallery{     grid-template-columns: repeat(4, 1fr);   }   .ctaBand{     grid-template-columns: 1.3fr .7fr;     align-items:center;     padding: 22px;   } }
+    </style>
+</head>
+<body>
+
+    <a href="#main" class="skip">Pular para o conteúdo</a>
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="container topbar__inner">
+            <div class="brand">
+                <div class="brand__mark"></div>
+                <div class="brand__text">
+                    <strong>NEXUS AI</strong>
+                    <span>Plataforma Inteligente</span>
+                </div>
+            </div>
+            <div class="pill">
+                <div class="pill__dot"></div>
+                Ativo agora
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__grid">
+                    <div class="hero__content">
+                        <div class="kicker">
+                            <i data-lucide="sparkles" size="14"></i> Novo lançamento v2.0
+                        </div>
+                        <h1 class="h1">Transforme dados em <span class="accent">Experiências Digitais</span> únicas.</h1>
+                        <p class="sub">A ferramenta definitiva para criadores que buscam performance absoluta e design minimalista em um só lugar.</p>
+                        
+                        <div class="ctaStack">
+                            <button class="btn btn--primary btn--xl">
+                                Começar Agora Grátis
+                                <span class="btn__arrow">→</span>
+                            </button>
+                            <button class="btn btn--ghost">Ver Documentação</button>
+                        </div>
+
+                        <div class="trustRow">
+                            <div class="trust">
+                                <div class="trust__icon">✓</div>
+                                <span class="micro">Utilizado por mais de 2.000 empresas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero__media">
+                        <div class="hero__glow"></div>
+                        <div class="hero__imageWrap">
+                            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2832&auto=format&fit=crop" alt="Dashboard Preview" class="hero__img">
+                        </div>
+                        <div class="hero__badges">
+                            <div class="badge">Open Source</div>
+                            <div class="badge">Cloud Native</div>
+                            <div class="badge">E2E Encrypted</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Split -->
+        <section class="section section--soft">
+            <div class="container">
+                <div class="split">
+                    <div class="card card--media">
+                        <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=2070&auto=format&fit=crop" class="media" alt="Interface">
+                        <div class="mediaOverlay"></div>
+                        <div class="mediaCaption">
+                            <strong>Interface Intuitiva</strong>
+                            <span>Design focado em UX</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="sectionHead">
+                            <h2 class="h2">Potencialize seu workflow</h2>
+                            <p class="p">Nossa plataforma foi desenhada para remover atritos. Automatize tarefas repetitivas e foque no que realmente importa.</p>
+                        </div>
+                        <ul class="bullets">
+                            <li>Integração direta com APIs modernas</li>
+                            <li>Suporte a múltiplos ambientes (Dev/Prod)</li>
+                            <li>Relatórios gerados por IA em tempo real</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Cards -->
+        <section class="section">
+            <div class="container">
+                <div class="sectionHead center" style="text-align:center">
+                    <h2 class="h2">Recursos Premium</h2>
+                </div>
+                <div class="cards">
+                    <div class="miniCard">
+                        <div class="miniCard__icon"><i data-lucide="zap" class="accent"></i></div>
+                        <h3>Ultra Velocidade</h3>
+                        <p>Infraestrutura global com latência zero para seus usuários finais.</p>
+                    </div>
+                    <div class="miniCard">
+                        <div class="miniCard__icon"><i data-lucide="shield-check" class="accent"></i></div>
+                        <h3>Segurança Máxima</h3>
+                        <p>Proteção contra ataques DDoS e criptografia de ponta a ponta.</p>
+                    </div>
+                    <div class="miniCard">
+                        <div class="miniCard__icon"><i data-lucide="layers" class="accent"></i></div>
+                        <h3>Escalabilidade</h3>
+                        <p>Cresça de 100 para 1 milhão de usuários sem configurar servidores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Gallery -->
+        <section class="section section--soft">
+            <div class="container">
+                <div class="sectionHead">
+                    <h2 class="h2 h2--tight">Galeria de Resultados</h2>
+                    <p class="p p--muted">Veja o que nossa comunidade está construindo.</p>
+                </div>
+                <div class="gallery">
+                    <div class="gItem" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800&auto=format&fit=crop" alt="Projeto 01">
+                        <div class="gCap">Web App Alpha</div>
+                    </div>
+                    <div class="gItem" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Projeto 02">
+                        <div class="gCap">Analytics Beta</div>
+                    </div>
+                    <div class="gItem" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1551288049-bbdac8626ad1?q=80&w=800&auto=format&fit=crop" alt="Projeto 03">
+                        <div class="gCap">Dashboard Gamma</div>
+                    </div>
+                    <div class="gItem" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=800&auto=format&fit=crop" alt="Projeto 04">
+                        <div class="gCap">Portal Delta</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps -->
+        <section class="section">
+            <div class="container">
+                <div class="sectionHead">
+                    <h2 class="h2">Como funciona</h2>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step__num">01</div>
+                        <div class="step__body">
+                            <h3>Conecte sua conta</h3>
+                            <p>Sincronize seus repositórios ou banco de dados em segundos.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step__num">02</div>
+                        <div class="step__body">
+                            <h3>Configure os fluxos</h3>
+                            <p>Use nosso editor visual para definir a lógica de automação.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step__num">03</div>
+                        <div class="step__body">
+                            <h3>Publique globalmente</h3>
+                            <p>Envie sua aplicação para produção com apenas um clique.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carousel -->
+        <section class="section">
+            <div class="container">
+                <div class="sectionHead">
+                    <h2 class="h2">Templates Prontos</h2>
+                </div>
+                <div class="carousel">
+                    <button class="carousel__btn" onclick="prevSlide()">‹</button>
+                    <div class="carousel__viewport">
+                        <div class="carousel__track" id="carouselTrack">
+                            <div class="slide">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000" alt="Slide 1">
+                                <div class="label">SaaS Starter</div>
+                            </div>
+                            <div class="slide">
+                                <img src="https://images.unsplash.com/photo-1551288049-bbdac8626ad1?auto=format&fit=crop&w=1000" alt="Slide 2">
+                                <div class="label">E-commerce Kit</div>
+                            </div>
+                            <div class="slide">
+                                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1000" alt="Slide 3">
+                                <div class="label">Social Graph</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel__btn" onclick="nextSlide()">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Band -->
+        <section class="section section--cta">
+            <div class="container">
+                <div class="ctaBand">
+                    <div class="ctaContent">
+                        <h2 class="h2">Pronto para elevar o nível?</h2>
+                        <p class="p">Junte-se a milhares de desenvolvedores agora.</p>
+                    </div>
+                    <button class="btn btn--primary">Começar Upgrade</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section section--final">
+            <div class="container">
+                <div class="finalCta">
+                    <h2 class="h2">Crie sua conta gratuita hoje.</h2>
+                    <p class="p p--muted" style="margin-bottom: 20px;">Não é necessário cartão de crédito para começar.</p>
+                    <button class="btn btn--primary btn--xl">Criar Minha Conta</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="brand">
+                <div class="brand__mark"></div>
+                <div class="brand__text">
+                    <strong>NEXUS</strong>
+                    <span class="micro--muted">© 2024 Nexus AI Inc.</span>
+                </div>
+            </div>
+            <div class="footer__links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox__backdrop" onclick="closeLightbox()"></div>
+        <div class="lightbox__content">
+            <button class="lightbox__close" onclick="closeLightbox()">×</button>
+            <img id="lightboxImg" src="" alt="Zoom">
+            <div class="lightbox__caption" id="lightboxCap"></div>
+        </div>
+    </div>
+
+    <script>
+        // Inicializa ícones Lucide
+        lucide.createIcons();
+
+        // Lógica do Carrossel
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.slide');
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        // Lógica do Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCap = document.getElementById('lightboxCap');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const cap = element.querySelector('.gCap');
+            lightboxImg.src = img.src;
+            lightboxCap.innerText = cap.innerText;
+            lightbox.classList.add('is-open');
+            document.body.style.overflow = 'hidden'; // Trava scroll
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('is-open');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
